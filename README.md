@@ -16,4 +16,4 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-![](https://github.com/skrevolve/skrevolve/blob/master/fail.gif) ![](https://github.com/skrevolve/skrevolve/blob/master/fail.gif)
+![](https://github.com/skrevolve/skrevolve/blob/master/fail.gif)
