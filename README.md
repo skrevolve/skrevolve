@@ -17,3 +17,4 @@ Here are some ideas to get you started:
 -->
 
 ![](https://github.com/skrevolve/skrevolve/blob/master/fail.gif)
+![](https://github.com/skrevolve/skrevolve/blob/master/cat2.gif)
