@@ -56,3 +56,4 @@ C --> D
 ```
 
 ![](https://github.com/skrevolve/skrevolve/blob/master/dino.gif)
+<!-- ###### by INDM.        feat https://stackedit.io/app -->
