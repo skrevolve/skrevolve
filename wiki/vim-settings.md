@@ -1,7 +1,7 @@
 
 .vimrc 참조
 
-link: [https://github.com/junegunn/vim-plug](https://github.com/junegunn/vim-plug)
+link: https://github.com/junegunn/vim-plug
 
 ## install
 ```
