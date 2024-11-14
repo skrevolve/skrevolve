@@ -1,15 +1,15 @@
 # My Wiki
 
 ## 📝 Current Projects
-* [[project-a]] - 진행중인 프로젝트 A
-* [[project-b]] - 진행중인 프로젝트 B
+* [[project-a]](project-a.md)
+* [[project-b]](project-b.md)
 
 ## 📚 Study Notes
-* [[javascript]]
-* [[python]]
+* [[javascript]](javascript.md)
+* [[python]](python.md)
 
 ## 💡 Ideas
-* [[ideas]]
+* [[ideas]](ideas.md)
 
 ## ⚙️ Settings
-* [[vim-settings]]
+* [[vim-settings]](vim-settings.md)
