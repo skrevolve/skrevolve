@@ -7,6 +7,7 @@
 ## 📚 Study Notes
 * [[javascript]](javascript.md)
 * [[python]](python.md)
+* [[pm2]](pm2.md)
 
 ## 💡 Ideas
 * [[ideas]](ideas.md)
