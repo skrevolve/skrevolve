@@ -15,6 +15,6 @@ vim 실행후 명령모드에서 :PlugInstall 입력
 
 ## command
 ```
-index 이동 ,ww
-링크 이동 enter
+index 이동 : command 에서 ,ww
+링크 이동: 커서 위치에서 enter
 ```
