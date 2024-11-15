@@ -28,7 +28,6 @@ let g:vimwiki_list = [
     \}
 \]
 
-" vimwiki의 conceallevel 을 끄는 쪽이 좋다
 let g:vimwiki_conceallevel = 0
 
 " Markdown to HTML 자동 변환 함수
@@ -39,12 +38,21 @@ function! SaveAndConvertToHTML()
     let current_file = expand('%:p')
     " .html 파일명 생성
     let html_file = expand('%:p:r') . '.html'
+    " 템플릿 파일 경로
+    let template_file = $HOME.'/skrevolve/wiki/template.html'
     " pandoc으로 변환 실행
-    execute '!pandoc ' . current_file . ' -o ' . html_file
+    execute '!pandoc ' . current_file . ' --template=' . template_file . ' -s -o ' . html_file
 endfunction
 
 " 저장시 자동 변환
 autocmd BufWritePost *.md call SaveAndConvertToHTML()
+
+" 자주 사용하는 vimwiki 명령어에 단축키를 취향대로 매핑해둔다
+" command! WikiIndex :VimwikiIndex
+" nmap <LocalLeader>ww <Plug>VimwikiIndex
+" nmap <LocalLeader>wi <Plug>VimwikiDiaryIndex
+" nmap <LocalLeader>w<LocalLeader>w <Plug>VimwikiMakeDiaryNote
+" nmap <LocalLeader>wt :VimwikiTable<CR>
 
 " F4 키를 누르면 커서가 놓인 단어를 위키에서 검색한다.
 " nnoremap <F4> :execute "VWS /" . expand("<cword>") . "/" <Bar> :lopen<CR>

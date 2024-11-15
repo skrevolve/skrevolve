@@ -142,17 +142,24 @@
      </style>
 </head>
 <body>
-<p>.vimrc 참조</p>
-<p>link: https://github.com/junegunn/vim-plug</p>
-<h2 id="install">install</h2>
-<pre><code>curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    
-vim ~/.vimrc (.vimrc 파일 참조)
+<h1 id="vim-settings">vim-settings</h1>
+<p>https://github.com/junegunn/vim-plug</p>
+<h2 id="install-vimlink">install vimlink</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-fLo</span> ~/.vim/autoload/plug.vim <span class="at">--create-dirs</span> <span class="dt">\</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">vim</span> ~/.vimrc <span class="er">(</span><span class="ex">.vimrc</span> 파일 참조<span class="kw">)</span> <span class="co"># vim 실행후 명령모드에서 :PlugInstall 입력</span></span></code></pre></div>
+<h2 id="install-pandoc">install pandoc</h2>
+<pre class="shell"><code># pandoc 설치
+sudo apt-get install pandoc   # 우분투
+brew install pandoc           # 맥
 
-vim 실행후 명령모드에서 :PlugInstall 입력</code></pre>
+# 변환
+pandoc pm2.md -o pm2.html</code></pre>
 <h2 id="command">command</h2>
 <pre><code>index 이동 : command 에서 ,ww
-링크 이동: 커서 위치에서 enter</code></pre>
+링크 이동: 커서 위치에서 enter
+전체 html 파일변환: ./md_to_html.sh
+md 매 저장시 html변환</code></pre>
 </body>
 </html>

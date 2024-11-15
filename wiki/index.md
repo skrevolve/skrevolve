@@ -14,4 +14,4 @@
 * [[ideas]](ideas.html)
 
 ## ⚙️ Settings
-* [[vim-settings]](vim-settings.html) 
+* [[vim-settings]](vim-settings.html)
