@@ -12,7 +12,7 @@ vim ~/.vimrc (.vimrc 파일 참조) # vim 실행후 명령모드에서 :PlugInst
 ```
 
 ## install pandoc
-```shell
+```sh
 # pandoc 설치
 sudo apt-get install pandoc   # 우분투
 brew install pandoc           # 맥
@@ -22,7 +22,7 @@ pandoc pm2.md -o pm2.html
 ```
 
 ## command
-```
+```sh
 index 이동 : command 에서 ,ww
 링크 이동: 커서 위치에서 enter
 전체 html 파일변환: ./md_to_html.sh

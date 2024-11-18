@@ -2,18 +2,20 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>index</title>
+    <title>ideas</title>
     <style>
         /* GitHub Dark Theme 스타일 */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
             font-size: 16px;
             line-height: 1.5;
-            max-width: 1012px;
             margin: 0 auto;
             padding: 32px;
             color: #c9d1d9;
             background-color: #0d1117;
+            /* 메인 콘텐츠 여백 조정 */
+            margin-left: 240px;  /* 사이드바 너비 + 여백 */
+            max-width: 1012px;
         }
      
         /* 제목 스타일 */
@@ -139,29 +141,90 @@
             background-color: #1c4b6b;
             color: #e6edf3;
         }
+
+        /* 검색 관련 스타일 */
+        .search-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        #search-input {
+            padding: 8px;
+            border: 1px solid #30363d;
+            border-radius: 4px;
+            background: #0d1117;
+            color: #c9d1d9;
+            width: 200px;
+        }
+
+        .highlight {
+            background-color: #634d36;
+            color: #e6edf3;
+        }
+
+        /* 왼쪽 사이드바 스타일 */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 100vh;
+            background-color: #161b22;
+            border-right: 1px solid #30363d;
+            padding: 20px;
+        }
+
+        /* 네비게이션 링크 스타일 */
+        .nav-link {
+            display: block;
+            padding: 8px 0;
+            color: #c9d1d9;
+            text-decoration: none;
+            border-bottom: 1px solid #21262d;
+        }
+
+        .nav-link:hover {
+            color: #58a6ff;
+        }
+
+        /* 홈 버튼 특별 스타일 */
+        .home-link {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
      </style>
 </head>
 <body>
-<h1 id="my-wiki">My Wiki</h1>
-<h2 id="current-projects">📝 Current Projects</h2>
-<ul>
-<li><a href="project-a.html">[project-a]</a></li>
-<li><a href="project-b.html">[project-b]</a></li>
-<li><a href="projcet-c.html">[project-c]</a></li>
-</ul>
-<h2 id="study-notes">📚 Study Notes</h2>
-<ul>
-<li><a href="javascript.html">[javascript]</a></li>
-<li><a href="python.html">[python]</a></li>
-<li><a href="pm2.html">[pm2]</a></li>
-</ul>
-<h2 id="ideas">💡 Ideas</h2>
-<ul>
-<li><a href="ideas.html">[ideas]</a></li>
-</ul>
-<h2 id="settings">⚙️ Settings</h2>
-<ul>
-<li><a href="vim-settings.html">[vim-settings]</a></li>
-</ul>
+    <div class="sidebar">
+        <a href="../html/index.html" class="nav-link home-link">🏠 Home</a>
+        
+            </div>
+
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search...">
+    </div>
+
+    <h1 id="ideas">ideas</h1>
+    
+    <script>
+        document.addEventListener(
+            "DOMContentLoaded", 
+            function() {
+                var input = document.getElementById("search-input");
+                input.addEventListener(
+                    "input",
+                    function() {
+                        var text = input.value;
+                        var content = document.body.innerHTML;
+                        var pattern = new RegExp(text, "g");
+                        document.body.innerHTML = content.replace(pattern, "<mark>" + text + "</mark>");
+                    }
+                );
+            }
+        );
+    </script>
 </body>
 </html>
